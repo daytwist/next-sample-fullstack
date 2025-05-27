@@ -10,26 +10,27 @@ const Header: React.FC = () => {
   let left = (
     <div className="left">
       <Link href="/">
-        <a className="bold" data-active={isActive("/")}>
+        <span className="bold" data-active={isActive("/")}>
           Feed
-        </a>
+        </span>
       </Link>
       <style jsx>{`
         .bold {
           font-weight: bold;
         }
 
-        a {
+        span {
           text-decoration: none;
           color: #000;
           display: inline-block;
+          cursor: pointer;
         }
 
-        .left a[data-active="true"] {
+        .left span[data-active="true"] {
           color: gray;
         }
 
-        a + a {
+        span + span {
           margin-left: 1rem;
         }
       `}</style>
